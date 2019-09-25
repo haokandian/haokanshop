@@ -38,6 +38,66 @@ class User extends Common
         parent::__construct();
     }
 
+
+   // 发送短信验证码
+    public function authCode( Request $request )
+    {
+        if( $request->isPost() )
+        {
+
+            $data = $this->data_post;
+            if( $data['mobile'] == '' )
+            {
+                return DataReturn( '手机号不能为空', 0,  $data['mobile'] );
+            }
+            $result = $this->validate($data,'User');
+            if(true !== $result){
+                return DataReturn( '手机号码格式不正确', 0,  $data['mobile'] );
+            }
+            $user = new UserModel();
+            $mobile = $user->phoneLogin( $data['mobile'] );
+
+            if( !$mobile )
+            {
+                return DataReturn( '手机号没有注册', 0,  $data['mobile']);
+            }
+
+            $code = mt_rand(999, 9999);
+//            Session::set( 'code', $code );
+//            $_SESSION['code'] = $code;
+            Cookie::set( 'code', $code );
+            $obj = new Note();
+            $ver = $obj->code( $data['mobile'] ,$code );
+
+            if( $ver !== false )
+            {
+                Cookie::set( 'mobile', $mobile );
+                return DataReturn('验证码发送成功', 1, $code);
+            }else{
+                return DataReturn('验证码发送失败', 0, $code);
+            }
+
+        }else{
+            return DataReturn('请求方式有误', 0, '');
+        }
+    }
+
+    // 手机登录
+    public function phoneLogin()
+    {
+        $data = $this->data_post;
+        if( $data['code'] !== Cookie::get('code')  )
+        {
+            return DataReturn( '验证码错误', 0,  $data['code']);
+        }else{
+            $data = Cookie::get('mobile');
+            return DataReturn( '验证码正确', 1,  $data );
+        }
+    }
+
+    // 密码登录
+
+
     /**
      * [Reg 用户注册-数据添加]
      * @author   Devil
