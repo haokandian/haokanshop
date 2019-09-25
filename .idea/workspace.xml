@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17f377af-fa94-426e-8d59-48d01c67c909" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Agreement.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Agreement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Goodscomments.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Goodscomments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Orderaftersale.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Orderaftersale.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Refundlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Refundlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Store.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Ueditor.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Ueditor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/agreement/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/agreement/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/agreement/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/agreement/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/answer/save_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/answer/save_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/appconfig/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/appconfig/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/appconfig/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/appconfig/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/appconfig/weixinmini.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/appconfig/weixinmini.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/config/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/config/store.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/goodscomments/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/goodscomments/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/goodscomments/save_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/goodscomments/save_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/lib/seo.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/lib/seo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/orderaftersale/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/orderaftersale/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/refundlog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/refundlog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/attachment.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/attachment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/extends.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/extends.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/forgetpwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/forgetpwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/imagesverify.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/imagesverify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/orderaftersale.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/orderaftersale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/site/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/store/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/store/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/Crontab.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/Crontab.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/Devtest.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/Devtest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Agreement.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Agreement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Orderaftersale.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Orderaftersale.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Pay.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Pay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Ueditor.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Ueditor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/agreement/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/agreement/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/orderaftersale/aftersale.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/orderaftersale/aftersale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/orderaftersale/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/orderaftersale/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/orderaftersale/delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/orderaftersale/delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/orderaftersale/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/orderaftersale/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/orderaftersale/step.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/orderaftersale/step.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/pay/qrcode.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/pay/qrcode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/public/login_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/public/login_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/search/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/search/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/default/user/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/default/user/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/CacheService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/CacheService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/CrontabService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/CrontabService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/GoodsCommentsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/GoodsCommentsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/OrderAftersaleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/OrderAftersaleService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/RefundLogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/RefundLogService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/SeoService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/SeoService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/StoreService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/StoreService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/SystemService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/SystemService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/UeditorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/UeditorService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/shopxo.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/shopxo.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ueditor.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/ueditor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/base/Age.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/base/Age.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/base/Qrcode.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/base/Qrcode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/payment/BaiduMini.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/payment/BaiduMini.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/payment/MafubaoAlipay.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/payment/MafubaoAlipay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/payment/MafubaoWeixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/payment/MafubaoWeixin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/payment/PayEase.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/payment/PayEase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/images/nav-icon-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/images/nav-icon-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/images/user-nav-cache-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/images/user-nav-cache-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/images/user-nav-customer-service-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/images/user-nav-customer-service-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/images/user-nav-order-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/images/user-nav-order-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domelementtype/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/lib/element.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/lib/element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/lib/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/lib/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/01-basic.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/01-basic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/02-single_tag_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/02-single_tag_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/03-single_tag_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/03-single_tag_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/04-unescaped_in_script.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/04-unescaped_in_script.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/05-tags_in_comment.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/05-tags_in_comment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/06-comment_in_script.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/06-comment_in_script.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/07-unescaped_in_style.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/07-unescaped_in_style.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/08-extra_spaces_in_tag.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/08-extra_spaces_in_tag.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/09-unquoted_attrib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/09-unquoted_attrib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/10-singular_attribute.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/10-singular_attribute.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/11-text_outside_tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/11-text_outside_tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/12-text_only.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/12-text_only.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/13-comment_in_text.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/13-comment_in_text.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/14-comment_in_text_in_script.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/14-comment_in_text_in_script.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/15-non-verbose.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/15-non-verbose.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/16-normalize_whitespace.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/16-normalize_whitespace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/17-xml_namespace.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/17-xml_namespace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/18-enforce_empty_tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/18-enforce_empty_tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/19-ignore_empty_tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/19-ignore_empty_tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/20-template_script_tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/20-template_script_tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/21-conditional_comments.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/21-conditional_comments.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/22-lowercase_tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/22-lowercase_tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/23-dom-lvl1.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/23-dom-lvl1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/24-with-start-indices.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/24-with-start-indices.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/25-with-end-indices.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/cases/25-with-end-indices.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/domhandler/test/tests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/lib/decode.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/lib/decode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/lib/decode_codepoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/lib/decode_codepoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/lib/encode.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/lib/encode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/decode.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/decode.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/entities.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/entities.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/legacy.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/legacy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/xml.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/maps/xml.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/test/mocha.opts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/test/mocha.opts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/entities/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/.airtap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/.airtap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/History.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/History.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/add-listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/add-listeners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/check-listener-leaks.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/check-listener-leaks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/errors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/events-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/events-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/legacy-compat.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/legacy-compat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/listener-count.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/listener-count.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/listeners-side-effects.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/listeners-side-effects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/listeners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/max-listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/max-listeners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/method-names.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/method-names.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/modify-in-emit.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/modify-in-emit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/num-args.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/num-args.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/once.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/once.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/prepend.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/prepend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/remove-all-listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/remove-all-listeners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/remove-listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/remove-listeners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/set-max-listeners-side-effects.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/set-max-listeners-side-effects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/special-event-names.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/special-event-names.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/subclass.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/subclass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/symbols.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/events/tests/symbols.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Parser.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Parser.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Tokenizer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Tokenizer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Tokenizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/Tokenizer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/inherits.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/inherits.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/inherits.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/es/inherits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Parser.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Parser.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Tokenizer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Tokenizer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Tokenizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/Tokenizer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/inherits.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/inherits.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/inherits.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/lib/inherits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/node_modules/mini-html-parser2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/cart/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/cart/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/common/copyright.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/common/copyright.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-category/goods-category.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-category/goods-category.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.acss" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.acss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-comment/goods-comment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-detail/goods-detail.acss" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-detail/goods-detail.acss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-detail/goods-detail.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-detail/goods-detail.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-detail/goods-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-detail/goods-detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-search/goods-search.acss" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/goods-search/goods-search.acss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/index/index.acss" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/index/index.acss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/index/index.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/index/index.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/detail-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/detail-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/goods-detail.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/goods-detail.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/home.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/home.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/nav-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/lib/limitedtimediscount/nav-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/login/login.acss" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/login/login.acss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/login/login.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/login/login.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/user/user.acss" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/user/user.acss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/user/user.axml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/user/user.axml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/alipay/pages/web-view/web-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/alipay/pages/web-view/web-view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/.wx2swaninfo" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/.wx2swaninfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/goods-detail-video-close.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/goods-detail-video-close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/goods-detail-video-play.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/goods-detail-video-play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/limitedtimediscount-nav-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/limitedtimediscount-nav-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/nav-icon-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/nav-icon-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/share-friend-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/share-friend-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/share-recomend-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/share-recomend-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/share-weixin-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/share-weixin-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/user-nav-cache-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/user-nav-cache-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/user-nav-customer-service-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/user-nav-customer-service-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/images/user-nav-order-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/images/user-nav-order-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/log/error.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/log/error.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/log/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/log/info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/log/warning.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/log/warning.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.swan" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/goods-comment/goods-comment.swan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/detail-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/detail-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/goods-detail.swan" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/goods-detail.swan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/home.swan" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/home.swan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/nav-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/limitedtimediscount/nav-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/online-service/content.swan" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/online-service/content.swan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/online-service/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/pages/lib/online-service/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/baidu/sitemap.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/baidu/sitemap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/goods-detail-video-close.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/goods-detail-video-close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/goods-detail-video-play.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/goods-detail-video-play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/limitedtimediscount-nav-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/limitedtimediscount-nav-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/nav-icon-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/nav-icon-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/share-friend-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/share-friend-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/share-recomend-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/share-recomend-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/share-weixin-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/share-weixin-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/user-nav-cache-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/user-nav-cache-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/user-nav-customer-service-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/user-nav-customer-service-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/images/user-nav-order-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/images/user-nav-order-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/goods-comment/goods-comment.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/detail-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/detail-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/goods-detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/goods-detail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/home.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/nav-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/limitedtimediscount/nav-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/online-service/content.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/online-service/content.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/online-service/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/pages/lib/online-service/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/appmini/old/weixin/sitemap.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/appmini/old/weixin/sitemap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/css/goodscomments.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/css/goodscomments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/css/index.index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/css/index.index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/css/orderaftersale.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/css/orderaftersale.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/css/store.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/css/store.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/images/default-images.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/images/default-images.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/js/goodscomments.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/js/goodscomments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/js/orderaftersale.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/js/orderaftersale.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/admin/default/js/pluginsadmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/default/js/pluginsadmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/common/images/default-images.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/common/images/default-images.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/index/default/css/customview.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/index/default/css/customview.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/index/default/css/orderaftersale.aftersale.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/index/default/css/orderaftersale.aftersale.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/index/default/css/orderaftersale.index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/index/default/css/orderaftersale.index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/index/default/css/pay.qrcode.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/index/default/css/pay.qrcode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/index/default/css/user.logout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/index/default/css/user.logout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/index/default/images/nav-icon-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/index/default/images/nav-icon-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/index/default/js/orderaftersale.aftersale.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/index/default/js/orderaftersale.aftersale.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157390405145.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157390405145.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157391428293.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157391428293.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157391517979.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157391517979.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157391533252.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/upload/images/app_center_nav/2019/07/03/1562157391533252.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/route/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rsakeys/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/rsakeys/.gitignore" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config/app.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="956" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="shopxo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopxo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopxo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopxo" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17f377af-fa94-426e-8d59-48d01c67c909" name="Default Changelist" comment="" />
+      <created>1569378046709</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569378046709</updated>
+      <workItem from="1569378047999" duration="311000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="311000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="956" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
