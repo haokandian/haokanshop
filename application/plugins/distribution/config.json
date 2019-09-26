@@ -1,0 +1,33 @@
+{
+    "base":{
+        "plugins":"distribution",
+        "name":"分销",
+        "logo":"\/static\/upload\/images\/plugins_distribution\/2019\/06\/03\/1559569612474606.jpg",
+        "author":"Devil",
+        "author_url":"https:\/\/shopxo.net\/",
+        "version":"1.1.0",
+        "desc":"分享赚取佣金、小程序商品海报",
+        "apply_terminal":[
+            "pc",
+            "h5"
+        ],
+        "apply_version":[
+            "1.5.0"
+        ],
+        "is_home":false
+    },
+    "hook":{
+        "plugins_service_users_center_left_menu_handle":[
+            "app\\plugins\\distribution\\Hook"
+        ],
+        "plugins_service_header_navigation_top_right_handle":[
+            "app\\plugins\\distribution\\Hook"
+        ],
+        "plugins_service_order_status_change_history_success_handle":[
+            "app\\plugins\\distribution\\Hook"
+        ],
+        "plugins_service_order_aftersale_audit_handle_end":[
+            "app\\plugins\\distribution\\Hook"
+        ]
+    }
+}
