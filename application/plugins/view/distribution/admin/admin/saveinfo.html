@@ -1,0 +1,110 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <!-- form start -->
+        <form class="am-form form-validation view-save" action="{{:PluginsAdminUrl('distribution', 'admin', 'save')}}" method="POST" request-type="ajax-url" request-value="{{:PluginsAdminUrl('distribution', 'admin', 'index')}}" enctype="multipart/form-data">
+            <legend>
+                <span class="fs-16">分销</span>
+                <a href="{{:PluginsAdminUrl('distribution', 'admin', 'index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+            </legend>
+            
+            <div class="am-form-group">
+                <label>分销层级<span class="am-form-group-label-tips">默认三级</span></label>
+                <div>
+                    {{foreach $distribution_level_list as $v}}
+                        <label class="am-radio-inline m-r-10">
+                            <input type="radio" name="level" value="{{$v.value}}" {{if isset($data['level']) and $data['level'] eq $v['value']}}checked="checked"{{else /}}{{if !isset($data['level']) and isset($v['checked']) and $v['checked'] eq true}}checked="checked"{{/if}}{{/if}} data-am-ucheck /> {{$v.name}}
+                        </label>
+                    {{/foreach}}
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <label>分销商内购<span class="am-form-group-label-tips">开启则分销商自己购买商品，获得一级佣金，默认关闭</span></label>
+                <div>
+                    {{foreach $distribution_is_enable_list as $v}}
+                        <label class="am-radio-inline m-r-10">
+                            <input type="radio" name="self_buy" value="{{$v.value}}" {{if isset($data['self_buy']) and $data['self_buy'] eq $v['value']}}checked="checked"{{else /}}{{if !isset($data['self_buy']) and isset($v['checked']) and $v['checked'] eq true}}checked="checked"{{/if}}{{/if}} data-am-ucheck /> {{$v.name}}
+                        </label>
+                    {{/foreach}}
+                </div>
+            </div>
+
+            <div class="am-form-group am-form-file">
+                <label class="block">默认等级图标<span class="am-form-group-label-tips">建议50像数X50像数</span></label>
+                <ul class="plug-file-upload-view plugins-default_level_images-view" data-form-name="default_level_images" data-max-number="1" data-dialog-type="images">
+                    {{if !empty($data['default_level_images'])}}
+                        <li>
+                            <input type="text" name="default_level_images" value="{{$data.default_level_images_old}}" data-validation-message="请上传默认等级图标" />
+                            <img src="{{$data.default_level_images}}" />
+                            <i>×</i>
+                        </li>
+                    {{/if}}
+                </ul>
+                <div class="plug-file-upload-submit" data-view-tag="ul.plugins-default_level_images-view">+上传图片</div>
+            </div>
+
+            <div class="am-form-group am-form-file">
+                <label class="block">默认二维码logo<span class="am-form-group-label-tips">建议50像数X50像数</span></label>
+                <ul class="plug-file-upload-view plugins-default_qrcode_logo-view" data-form-name="default_qrcode_logo" data-max-number="1" data-dialog-type="images">
+                    {{if !empty($data['default_qrcode_logo'])}}
+                        <li>
+                            <input type="text" name="default_qrcode_logo" value="{{$data.default_qrcode_logo_old}}" data-validation-message="请上传默认二维码logo" />
+                            <img src="{{$data.default_qrcode_logo}}" />
+                            <i>×</i>
+                        </li>
+                    {{/if}}
+                </ul>
+                <div class="plug-file-upload-submit" data-view-tag="ul.plugins-default_qrcode_logo-view">+上传图片</div>
+            </div>
+
+            <div class="am-form-group am-form-file">
+                <label class="block">不符合分销条件描述<span class="am-form-group-label-tips">空则不显示</span></label>
+                <textarea rows="3" name="non_conformity_desc" class="am-radius am-field-valid" placeholder="不符合分销条件描述" data-validation-message="请填写不符合分销条件描述">{{if !empty($data['non_conformity_desc'])}}{{$data.non_conformity_desc}}{{/if}}</textarea>
+            </div>
+
+            <div class="am-form-group am-form-file">
+                <label class="block">用户海报页面顶部描述<span class="am-form-group-label-tips">空则不显示</span></label>
+                <textarea rows="3" name="user_poster_top_desc" class="am-radius am-field-valid" placeholder="用户海报页面顶部描述" data-validation-message="请填写用户海报页面顶部描述">{{if !empty($data['user_poster_top_desc'])}}{{$data.user_poster_top_desc}}{{/if}}</textarea>
+            </div>
+
+            <div class="am-form-group">
+                <label>用户海报分享标题<span class="am-form-group-label-tips">空则读取站点页面名称</span></label>
+                <input type="text" name="user_poster_share_title" placeholder="用户海报分享标题" maxlength="60" data-validation-message="用户海报分享标题格式最多 60 个字符" class="am-radius" value="{{if !empty($data['user_poster_share_title'])}}{{$data.user_poster_share_title}}{{/if}}" />
+            </div>
+            
+            <div class="am-form-group am-form-file">
+                <label class="block">用户海报分享描述<span class="am-form-group-label-tips">空则读取站点页面描述</span></label>
+                <textarea rows="3" name="user_poster_share_desc" class="am-radius am-field-valid" placeholder="用户海报分享描述" data-validation-message="请填写用户海报分享描述">{{if !empty($data['user_poster_share_desc'])}}{{$data.user_poster_share_desc}}{{/if}}</textarea>
+            </div>
+
+            <div class="am-form-group">
+                <label>分销中心开启等级介绍<span class="am-form-group-label-tips">开启后用户将可以看见分销等级数据，默认关闭</span></label>
+                <div>
+                    {{foreach $distribution_is_enable_list as $v}}
+                        <label class="am-radio-inline m-r-10">
+                            <input type="radio" name="is_show_introduce" value="{{$v.value}}" {{if isset($data['is_show_introduce']) and $data['is_show_introduce'] eq $v['value']}}checked="checked"{{else /}}{{if !isset($data['is_show_introduce']) and !isset($v['checked'])}}checked="checked"{{/if}}{{/if}} data-am-ucheck /> {{$v.name}}
+                        </label>
+                    {{/foreach}}
+                </div>
+            </div>
+
+            <div class="am-form-group am-form-file">
+                <label class="block">等级介绍顶部描述<span class="am-form-group-label-tips">空则不显示</span></label>
+                <textarea rows="3" name="user_center_level_desc" class="am-radius am-field-valid" placeholder="等级介绍顶部描述" data-validation-message="请填写等级介绍顶部描述">{{if !empty($data['user_center_level_desc'])}}{{$data.user_center_level_desc}}{{/if}}</textarea>
+            </div>
+
+            <div class="am-form-group am-form-group-refreshing">
+                <button type="submit" class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block" data-am-loading="{loadingText:'处理中...'}">保存</button>
+            </div>
+        </form>
+        <!-- form end -->
+    </div>
+</div>
+<!-- right content end  -->
+        
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->

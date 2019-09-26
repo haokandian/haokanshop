@@ -1,0 +1,118 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <legend>
+            <span class="fs-16">
+                {{if empty($data['id'])}}
+                    等级添加
+                {{else /}}
+                    等级编辑
+                {{/if}}
+            </span>
+            <a href="{{:PluginsAdminUrl('distribution', 'level', 'index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+        </legend>
+
+        <div class="distribution-content">
+            <!-- form start -->
+            <form class="am-form form-validation view-save" action="{{:PluginsAdminUrl('distribution', 'level', 'save')}}" method="POST" request-type="ajax-url" request-value="{{:PluginsAdminUrl('distribution', 'level', 'index')}}" enctype="multipart/form-data">
+                <div class="am-form-group">
+                    <label>名称</label>
+                    <input type="text" name="name" placeholder="名称" minlength="1" maxlength="30" data-validation-message="名称格式 1~30 个字符" class="am-radius" {{if !empty($data['name'])}} value="{{$data.name}}"{{/if}} required />
+                </div>
+
+                <div class="am-form-group am-form-file">
+                    <label class="block">图标<span class="am-form-group-label-tips">建议50像数x50像数</span></label>
+                    <ul class="plug-file-upload-view images_url-images-view" data-form-name="images_url" data-max-number="1" data-delete="1" data-dialog-type="images">
+                        {{if !empty($data['images_url'])}}
+                            <li>
+                                <input type="text" name="images_url" value="{{$data.images_url_old}}" data-validation-message="请上传图标" />
+                                <img src="{{$data.images_url}}" />
+                                <i>×</i>
+                            </li>
+                        {{/if}}
+                    </ul>
+                    <div class="plug-file-upload-submit" data-view-tag="ul.images_url-images-view">+上传图标</div>
+                </div>
+                
+                <div class="am-alert am-alert-warning">
+                    <button type="button" class="am-close">&times;</button>
+                    <p>
+                        规则举例 <br>
+                        <span class="mini-tips-text">
+                            最小规则0 - 最大规则100 则是小于100<br>
+                            最小规则1000 - 最大规则0 则是大于1000<br>
+                            最小规则100 - 最大规则500 则是大于等于100并且小于500
+                        </span>
+                    </p>
+                </div>
+                <div class="am-form-group">
+                    <label>消费金额</label>
+                    <div class="rules-value">
+                        <input type="number" placeholder="最小金额" name="rules_min" min="0" step="0.01" data-validation-message="请填写消费最小金额" class="am-radius" {{if isset($data['rules_min'])}} value="{{$data.rules_min}}"{{/if}} required />
+                        <span>~</span>
+                        <input type="number" placeholder="最大金额" min="0" step="0.01" name="rules_max" data-validation-message="请填写消费最大金额" class="am-radius" {{if isset($data['rules_max'])}} value="{{$data.rules_max}}"{{/if}} required />
+                    </div>
+                </div>
+
+                <div class="am-alert am-alert-warning">
+                    <button type="button" class="am-close">&times;</button>
+                    <p>
+                        订单交易成功后返佣的比例0 - 100, 例:5 = 反订单金额的5%, 0则不返佣, 返佣举例<br>
+                        <span class="mini-tips-text">
+                            我邀请了A用户注册，A用户就是我的一级分销<br />
+                            A用户邀请了B用户注册，B用户就是我的二级分销<br />
+                            B用户邀请了C用户注册，C用户就是我的三级分销
+                        </span>
+                    </p>
+                </div>
+                <div class="am-form-group">
+                    <label>一级返佣比例</label>
+                    <div class="am-input-group am-input-group-sm">
+                        <input type="number" name="level_rate_one" placeholder="一级返佣比例" min="0" max="100" data-validation-message="一级返佣比例 0~100 的数字" class="am-form-field am-radius" {{if !empty($data['level_rate_one'])}} value="{{$data.level_rate_one}}"{{/if}} />
+                        <span class="am-input-group-btn">
+                            <button type="button" class="am-btn am-btn-default am-radius">%</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="am-form-group">
+                    <label>二级返佣比例</label>
+                    <div class="am-input-group am-input-group-sm">
+                        <input type="number" name="level_rate_two" placeholder="二级返佣比例" min="0" max="100" data-validation-message="二级返佣比例 0~100 的数字" class="am-form-field am-radius" {{if !empty($data['level_rate_two'])}} value="{{$data.level_rate_two}}"{{/if}} />
+                        <span class="am-input-group-btn">
+                            <button type="button" class="am-btn am-btn-default am-radius">%</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="am-form-group">
+                    <label>三级返佣比例</label>
+                    <div class="am-input-group am-input-group-sm">
+                        <input type="number" name="level_rate_three" placeholder="三级返佣比例" min="0" max="100" data-validation-message="三级返佣比例 0~100 的数字" class="am-form-field am-radius" {{if !empty($data['level_rate_three'])}} value="{{$data.level_rate_three}}"{{/if}} />
+                        <span class="am-input-group-btn">
+                            <button type="button" class="am-btn am-btn-default am-radius">%</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="am-form-group">
+                    <label class="block">是否启用</label>
+                    <input name="is_enable" value="1" type="checkbox" data-off-text="否" data-on-text="是" data-size="xs" data-on-color="success" data-off-color="default" data-handle-width="50" data-am-switch {{if (isset($data['is_enable']) and $data['is_enable'] eq 1) or empty($data)}}checked="true"{{/if}} />
+                </div>
+
+                <div class="am-form-group am-form-group-refreshing">
+                    <input type="hidden" name="id" {{if !empty($data['id'])}} value="{{$data.id}}"{{/if}} />
+                    <button type="submit" class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block" data-am-loading="{loadingText:'处理中...'}">保存</button>
+                </div>
+            </form>
+            <!-- form end -->
+        </div>
+    </div>
+</div>
+<!-- right content end  -->
+        
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->

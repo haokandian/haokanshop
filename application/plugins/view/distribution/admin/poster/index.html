@@ -1,0 +1,127 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content distribution-content">
+        <!-- form start -->
+        <form class="am-form form-validation view-save" action="{{:PluginsAdminUrl('distribution', 'poster', 'save')}}" method="POST" request-type="ajax-url" request-value="{{:PluginsAdminUrl('distribution', 'poster', 'index')}}" enctype="multipart/form-data">
+            <legend>
+                <span class="fs-16">海报</span>
+                <a href="{{:PluginsAdminUrl('distribution', 'admin', 'index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+            </legend>
+
+            <div class="am-alert" data-am-alert>
+                <p>可拖动头像、二维码、昵称调整位置，如修改</p>
+                <p>修改后如需生效，请清除用户已生成的海报<button type="button" class="am-btn am-btn-danger am-radius am-btn-sm am-margin-left-xs submit-ajax" data-url="{{:PluginsAdminUrl('distribution', 'poster', 'delete')}}" data-id="1">清除海报</button></p>
+            </div>
+
+            <!-- 左侧海报 -->
+            <div class="poster-images am-fl am-margin-bottom-sm">
+                <img src="{{if empty($data['backdrop'])}}{{$attachment_host}}/static/plugins/images/distribution/default-backdrop.png{{else /}}{{$data.backdrop}}{{/if}}" class="backdrop" data-form-name="backdrop" data-dialog-type="images" data-is-attr="src" />
+                <img src="{{$attachment_host}}/static/plugins/images/distribution/default-avatar.jpg" class="tdrag avatar {{if !empty($data['avatar_border_style'])}}{{$distribution_border_style_list[$data['avatar_border_style']]['class']}}{{/if}}" 
+                style="
+                    {{if !empty($data['avatar_width'])}}width:{{$data['avatar_width']}}px;{{/if}}
+                    {{if isset($data['avatar_top'])}}top:{{$data['avatar_top']}}px;{{/if}}
+                    {{if isset($data['avatar_left'])}}left:{{$data['avatar_left']}}px;{{/if}}
+                " />
+
+                <p class="tdrag nickname am-text-sm"
+                style="
+                    {{if !empty($data['nickname_color'])}}color:{{$data.nickname_color}};{{/if}}
+                    {{if isset($data['nickname_top'])}}top:{{$data['nickname_top']}}px;{{/if}}
+                    {{if isset($data['nickname_left'])}}left:{{$data['nickname_left']}}px;{{/if}}
+                ">这里是昵称</p>
+
+                <img src="{{$attachment_host}}/static/plugins/images/distribution/default-qrcode.png" class="tdrag qrcode {{if !empty($data['qrcode_border_style'])}}{{$distribution_border_style_list[$data['qrcode_border_style']]['class']}}{{/if}}" 
+                style="
+                    {{if !empty($data['qrcode_width'])}}width:{{$data['qrcode_width']}}px;{{/if}}
+                    {{if isset($data['qrcode_top'])}}top:{{$data['qrcode_top']}}px;{{/if}}
+                    {{if isset($data['qrcode_left'])}}left:{{$data['qrcode_left']}}px;{{/if}}
+                " />
+            </div>
+
+            <!-- 右侧表单 -->
+            <div class="poster-right am-fr" data-border-style='{{:json_encode(array_column($distribution_border_style_list, "class"))}}'>
+                <div class="am-alert am-alert-secondary" data-am-alert>
+                    <div class="am-form-group am-form-file">
+                        <input type="hidden" name="backdrop" value="{{if empty($data['backdrop'])}}/static/plugins/images/distribution/default-backdrop.png{{else /}}{{$data.backdrop}}{{/if}}" />
+                        <label class="block">海报背景图<span class="am-form-group-label-tips">宽大于(等于)750像素，高大于(等于)1200像素</span></label>
+                        <div class="plug-file-upload-submit" data-view-tag=".poster-images .backdrop">+上传图片</div>
+
+                        <a href="javascript:;" class="am-btn-link am-margin-left-xs poster-recovery-default" data-default-poster-old="/static/plugins/images/distribution/default-backdrop.png" data-default-poster="{{$attachment_host}}/static/plugins/images/distribution/default-backdrop.png">恢复默认海报</a>
+                    </div>
+                </div>
+
+                <div class="am-alert am-alert-secondary" data-am-alert>
+                    <div class="am-form-group">
+                        <label>头像宽度<span class="am-form-group-label-tips">最小30，最大300，默认60，单位px</span></label>
+                        <input type="hidden" name="avatar_top" value="{{if empty($data['avatar_top'])}}0{{else /}}{{$data.avatar_top}}{{/if}}" />
+                        <input type="hidden" name="avatar_left" value="{{if empty($data['avatar_left'])}}0{{else /}}{{$data.avatar_left}}{{/if}}" />
+                        <input type="number" name="avatar_width" placeholder="头像宽度" min="30" max="300" data-validation-message="头像宽度尺寸 30~300 之间" class="am-radius" value="{{if !empty($data['avatar_width'])}}{{$data.avatar_width}}{{else /}}60{{/if}}" />
+                    </div>
+                    <div class="am-form-group">
+                        <label>头像样式<span class="am-form-group-label-tips">默认正方形</span></label>
+                        <div>
+                            {{foreach $distribution_border_style_list as $v}}
+                                <label class="am-radio-inline m-r-10">
+                                    <input type="radio" name="avatar_border_style" value="{{$v.value}}" {{if isset($data['avatar_border_style']) and $data['avatar_border_style'] eq $v['value']}}checked="checked"{{else /}}{{if !isset($data['avatar_border_style']) and isset($v['checked']) and $v['checked'] eq true}}checked="checked"{{/if}}{{/if}} data-am-ucheck /> {{$v.name}}
+                                </label>
+                            {{/foreach}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="am-alert am-alert-secondary" data-am-alert>
+                    <div class="am-form-group">
+                        <label>昵称颜色<span class="am-form-group-label-tips">默认黑色</span></label>
+                        <input type="hidden" name="nickname_top" value="{{if empty($data['nickname_top'])}}0{{else /}}{{$data.nickname_top}}{{/if}}" />
+                        <input type="hidden" name="nickname_left" value="{{if empty($data['nickname_left'])}}0{{else /}}{{$data.nickname_left}}{{/if}}" />
+                        <input type="hidden" name="nickname_color" value="{{if !empty($data['nickname_color'])}}{{$data.nickname_color}}{{/if}}" />
+                        <button class="am-btn am-btn-default am-btn-xs colorpicker-submit bg-color-tag am-btn-block bk-cr-white t-r" type="button" data-input-tag="button.bg-color-tag" data-color-tag="input[name='nickname_color']" data-color-style="background-color" {{if !empty($data['nickname_color'])}}style="background:{{$data.nickname_color}};"{{/if}}>
+                            <img src="{{$attachment_host}}/static/common/images/colorpicker.png" />
+                        </button>
+                    </div>
+                    <div class="am-form-group">
+                        <label>自动计算居中位置<span class="am-form-group-label-tips">默认关闭</span></label>
+                        <div>
+                            {{foreach $distribution_is_enable_list as $v}}
+                                <label class="am-radio-inline m-r-10">
+                                    <input type="radio" name="nickname_auto_center" value="{{$v.value}}" {{if isset($data['nickname_auto_center']) and $data['nickname_auto_center'] eq $v['value']}}checked="checked"{{else /}}{{if !isset($data['nickname_auto_center']) and isset($v['checked']) and $v['checked'] eq true}}checked="checked"{{/if}}{{/if}} data-am-ucheck /> {{$v.name}}
+                                </label>
+                            {{/foreach}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="am-alert am-alert-secondary" data-am-alert>
+                    <div class="am-form-group">
+                        <label>二维码宽度<span class="am-form-group-label-tips">最小60，最大300，默认100，单位px</span></label>
+                        <input type="hidden" name="qrcode_top" value="{{if empty($data['qrcode_top'])}}0{{else /}}{{$data.qrcode_top}}{{/if}}" />
+                        <input type="hidden" name="qrcode_left" value="{{if empty($data['qrcode_left'])}}0{{else /}}{{$data.qrcode_left}}{{/if}}" />
+                        <input type="number" name="qrcode_width" placeholder="二维码宽度" min="60" max="300" data-validation-message="二维码宽度尺寸 60~300 之间" class="am-radius" value="{{if !empty($data['qrcode_width'])}}{{$data.qrcode_width}}{{else /}}100{{/if}}" />
+                    </div>
+                    <div class="am-form-group">
+                        <label>二维码样式<span class="am-form-group-label-tips">默认正方形</span></label>
+                        <div>
+                            {{foreach $distribution_border_style_list as $v}}
+                                <label class="am-radio-inline m-r-10">
+                                    <input type="radio" name="qrcode_border_style" value="{{$v.value}}" {{if isset($data['qrcode_border_style']) and $data['qrcode_border_style'] eq $v['value']}}checked="checked"{{else /}}{{if !isset($data['qrcode_border_style']) and isset($v['checked']) and $v['checked'] eq true}}checked="checked"{{/if}}{{/if}} data-am-ucheck /> {{$v.name}}
+                                </label>
+                            {{/foreach}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="am-form-group am-form-group-refreshing">
+                    <button type="submit" class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block" data-am-loading="{loadingText:'处理中...'}">保存</button>
+                </div>
+            </div>
+        </form>
+        <!-- form end -->
+    </div>
+</div>
+<!-- right content end  -->
+        
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->

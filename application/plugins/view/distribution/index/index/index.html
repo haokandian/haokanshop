@@ -1,0 +1,224 @@
+{{include file="public/header" /}}
+
+<!-- header top nav -->
+{{include file="public/header_top_nav" /}}
+
+<!-- search -->
+{{include file="public/nav_search" /}}
+
+<!-- header nav -->
+{{include file="public/header_nav" /}}
+
+<!-- goods category -->
+{{include file="public/goods_category" /}}
+
+<!-- content -->
+<div class="am-container user-main">
+
+    <!-- user menu start -->
+    {{include file="public/user_menu" /}}
+    <!-- user menu end -->
+
+    <!-- content start -->
+    <div class="user-content">
+        <div class="user-content-body">
+            {{if !empty($user_level)}}
+                <!-- 基础信息 -->
+                <div class="base am-padding-sm am-cf">
+                    <div class="base-left am-fl">
+                        <img src="{{$user.avatar}}" alt="用户头像" class="am-img-thumbnail am-circle user-avatar" width="75" />
+                        <p class="am-text-center">{{$user.user_name_view}}</p>
+                    </div>
+                    <div class="am-fl base-content am-margin-left-lg">
+                        <p class="total-price am-text-truncate">收益 <span class="am-text-sm">{{$user_profit_price}}</span> 元</p>
+                        <a href="{{:PluginsHomeUrl('wallet', 'cash', 'authinfo')}}" class="am-btn am-btn-success am-btn-sm am-radius am-margin-top-xs">去提现</a>
+                    </div>
+                    <div class="base-right-top am-fr am-text-center am-padding-sm am-radius certificate">
+                        <img src="{{$user_level.images_url}}" alt="分销等级" width="45" />
+                        <p class="name">{{$user_level.name}}</p>
+                    </div>
+                </div>
+
+                <!-- 导航 -->
+                <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-3 nav-items am-margin-top-sm">
+                    <li class="am-padding-xs">
+                        <div class="items am-text-center">
+                            <a href="{{:PluginsHomeUrl('distribution', 'profit', 'index')}}" class="am-block am-padding-sm">
+                                <img src="{{$attachment_host}}/static/plugins/images/distribution/index/profit-icon.png" alt="收益明细" width="35" />
+                                <p>收益明细</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="am-padding-xs">
+                        <div class="items am-text-center">
+                            <a href="{{:PluginsHomeUrl('wallet', 'cash', 'index')}}" class="am-block am-padding-sm">
+                                <img src="{{$attachment_host}}/static/plugins/images/distribution/index/cash-icon.png" alt="提现明细" width="35" />
+                                <p>提现明细</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="am-padding-xs">
+                        <div class="items am-text-center">
+                            <a href="{{:PluginsHomeUrl('distribution', 'order', 'index')}}" class="am-block am-padding-sm">
+                                <img src="{{$attachment_host}}/static/plugins/images/distribution/index/order-icon.png" alt="分销订单" width="35" />
+                                <p>分销订单</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="am-padding-xs">
+                        <div class="items am-text-center">
+                            <a href="{{:PluginsHomeUrl('distribution', 'team', 'index')}}" class="am-block am-padding-sm">
+                                <img src="{{$attachment_host}}/static/plugins/images/distribution/index/team-icon.png" alt="我的团队" width="35" />
+                                <p>我的团队</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="am-padding-xs">
+                        <div class="items am-text-center">
+                            <a href="{{:PluginsHomeUrl('distribution', 'poster', 'index')}}" class="am-block am-padding-sm">
+                                <img src="{{$attachment_host}}/static/plugins/images/distribution/index/poster-icon.png" alt="推广返利" width="35" />
+                                <p>推广返利</p>
+                            </a>
+                        </div>
+                    </li>
+                    {{if !isset($plugins_base_data['is_show_introduce']) or $plugins_base_data['is_show_introduce'] eq 1}}
+                        <li class="am-padding-xs">
+                            <div class="items am-text-center">
+                                <a href="{{:PluginsHomeUrl('distribution', 'introduce', 'index')}}" class="am-block am-padding-sm">
+                                    <img src="{{$attachment_host}}/static/plugins/images/distribution/index/introduce-icon.png" alt="等级介绍" width="35" />
+                                    <p>等级介绍</p>
+                                </a>
+                            </div>
+                        </li>
+                    {{/if}}
+                </ul>
+
+                <!-- 近15日收益走势 -->
+                <div class="echarts-container am-padding-sm am-margin-top-sm">
+                    <div class="echarts-title">
+                        <span class="icon"></span>
+                        <span class="title am-text-sm am-margin-left-sm">近15日收益走势</span>
+                    </div>
+                    <div id="echarts-profit"></div>
+                </div>
+
+                <!-- 近15日推广用户数 -->
+                <div class="echarts-container am-padding-sm am-margin-top-sm">
+                    <div class="echarts-title">
+                        <span class="icon"></span>
+                        <span class="title am-text-sm am-margin-left-sm">近15日推广用户数</span>
+                    </div>
+                    <div id="echarts-user"></div>
+                </div>
+            {{else /}}
+                {{include file="../../../plugins/view/distribution/index/public/nav" /}}
+            {{/if}}
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->
+
+<script type="text/javascript">
+$(function()
+{
+    // 近7日订单交易走势
+    var profit_chart = echarts.init(document.getElementById('echarts-profit'));
+    var option = {
+        tooltip : {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+        grid: {
+            top: '13%',
+            left: '3%',
+            right: '5%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: false},
+                saveAsImage : {name:'近15日收益走势', show: true}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap : false,
+            data: {{:json_encode($profit_chart.name_arr)}}
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: {{:json_encode($profit_chart.data)}},
+            type: 'line'
+        }]
+    };
+    profit_chart.setOption(option);
+
+    // 近15日推广用户数
+    var user_chart = echarts.init(document.getElementById('echarts-user'));
+    var option = {
+        tooltip : {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+        grid: {
+            top: '13%',
+            left: '3%',
+            right: '5%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: false},
+                saveAsImage : {name:'近15日推广用户数', show: true}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap : false,
+            data: {{:json_encode($user_chart.name_arr)}}
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: {{:json_encode($user_chart.data)}},
+            type: 'bar',
+            areaStyle: {}
+        }]
+    };
+    user_chart.setOption(option);
+
+    // 浏览器大小改变则实时更新图表大小
+    window.onresize = function ()
+    {
+        profit_chart.resize();
+        user_chart.resize();
+    };
+});
+</script>

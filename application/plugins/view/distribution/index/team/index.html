@@ -1,0 +1,119 @@
+{{include file="public/header" /}}
+
+<!-- header top nav -->
+{{include file="public/header_top_nav" /}}
+
+<!-- search -->
+{{include file="public/nav_search" /}}
+
+<!-- header nav -->
+{{include file="public/header_nav" /}}
+
+<!-- goods category -->
+{{include file="public/goods_category" /}}
+
+<!-- content -->
+<div class="am-container user-main">
+    <!-- user menu start -->
+    {{include file="public/user_menu" /}}
+    <!-- user menu end -->
+
+    <!-- content start -->
+    <div class="user-content">
+        <div class="user-content-body">
+            {{include file="../../../plugins/view/distribution/index/public/nav" /}}
+            
+            {{if !empty($user_level)}}
+                <!-- 列表 -->
+                <div class="data-list">
+                    <table class="am-table am-table-striped">
+                        <thead>
+                            <tr>
+                                <th class="am-hide-md-down">头像</th>
+                                <th>用户名</th>
+                                <th>消费金额(元)</th>
+                                <th class="am-hide-sm-only">下级消费金额(元)</th>
+                                <th class="am-hide-sm-only">下级用户总数</th>
+                                <th class="am-hide-md-down">加入时间</th>
+                                <th>更多</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{if !empty($data_list)}}
+                                {{foreach $data_list as $v}}
+                                    <tr id="data-list-{{$v.id}}">
+                                        <td class="am-hide-md-down">
+                                            <img src="{{$v.avatar}}" alt="{{$v.user_name_view}}" class="am-img-thumbnail am-circle" width="35" />
+                                        </td>
+                                        <td>{{$v.user_name_view}}</td>
+                                        <td class="am-text-danger">
+                                            <strong>{{$v.order_total}}</strong>
+                                        </td>
+                                        <td class="am-text-danger am-hide-sm-only">
+                                            <strong>{{$v.find_order_total}}</strong>
+                                        </td>
+                                        <td class="am-hide-sm-only">{{$v.referrer_count}}</td>
+                                        <td class="am-hide-md-down">{{$v.add_time_text}}</td>
+                                        <td>
+                                            <span class="am-icon-caret-down c-p" data-am-modal="{target: '#my-popup{{$v.id}}'}"> 查看更多</span>
+                                            <div class="am-popup am-radius" id="my-popup{{$v.id}}">
+                                                <div class="am-popup-inner">
+                                                    <div class="am-popup-hd">
+                                                        <h4 class="am-popup-title">详情内容</h4>
+                                                        <span data-am-modal-close
+                                                        class="am-close">&times;</span>
+                                                    </div>
+                                                    <div class="am-popup-bd">
+                                                        <dl class="dl-content">
+                                                            <dt>头像</dt>
+                                                            <dd>
+                                                                <img src="{{$v.avatar}}" alt="{{$v.user_name_view}}" class="am-img-thumbnail am-circle" width="35" />
+                                                            </dd>
+
+                                                            <dt>用户名</dt>
+                                                            <dd>{{$v.user_name_view}}</dd>
+
+                                                            <dt>消费金额(元)</dt>
+                                                            <dd class="am-text-danger">{{$v.order_total}}</dd>
+
+                                                            <dt>下级消费金额(元)</dt>
+                                                            <dd class="am-text-danger">{{$v.find_order_total}}</dd>
+
+                                                            <dt>下级用户总数</dt>
+                                                            <dd>{{$v.referrer_count}}</dd>
+
+                                                            <dt>加入时间</dt>
+                                                            <dd>{{$v.add_time_text}}</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="{{:PluginsHomeUrl('distribution', 'order', 'index', ['uid'=>$v['id']])}}" class="am-btn am-btn-default am-radius am-btn-sm am-icon-line-chart"> 订单</a>
+                                        </td>
+                                    </tr>
+                                {{/foreach}}
+                            {{/if}}
+                        </tbody>
+                    </table>
+
+                    {{if empty($data_list)}}
+                        <div class="table-no"><i class="am-icon-warning"></i> 没有相关数据</div>
+                    {{/if}}
+                </div>
+
+                <!-- 分页 -->
+                {{if !empty($data_list)}}
+                    {{$page_html|raw}}
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->

@@ -1,0 +1,323 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <legend>
+            <span class="fs-16">分销</span>
+            <a href="{{:MyUrl('admin/pluginsadmin/index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+        </legend>
+
+        <div class="distribution-content">
+            <div class="am-alert am-alert-warning" data-am-alert>
+                <p>1. 订单收货发放相应佣金，不分前后端收货操作。</p>
+                <p>2. 佣金发放为有效金额，请按照自身业务处理，避免带来不必要的损失。</p>
+                <p>3. 小程序商品海报需在后台 手机端管理 -> 微信小程序（启用海报分享）</p>
+            </div>
+
+            <!-- 基础数据 -->
+            <div class="am-panel am-panel-secondary">
+                <div class="am-panel-hd">
+                    <span class="am-panel-title">基础数据</span>
+                    <a class="am-fr" href="{{:PluginsAdminUrl('distribution', 'admin', 'saveinfo')}}">编辑</a>
+                </div>
+                <div class="am-panel-bd am-padding-sm">
+                    <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-gallery-default">
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>分销层级</label>
+                                <div>
+                                    {{if isset($data['level']) and isset($distribution_level_list[$data['level']])}}
+                                        {{$distribution_level_list[$data['level']]['name']}}
+                                    {{else /}}
+                                        未设置，默认[ 三级 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>分销商内购</label>
+                                <div>
+                                    {{if isset($data['self_buy']) and isset($distribution_is_enable_list[$data['self_buy']])}}
+                                        {{$distribution_is_enable_list[$data['self_buy']]['name']}}
+                                    {{else /}}
+                                        未设置，默认[ 关闭 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>默认等级图标</label>
+                                <div class="immages-tag">
+                                    <img src="{{if !empty($data['default_level_images'])}}{{$data.default_level_images}}{{else /}}{{$attachment_host}}/static/plugins/images/distribution/default-level.png{{/if}}" />
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>默认二维码logo</label>
+                                {{if !empty($data['default_qrcode_logo'])}}
+                                    <div class="immages-tag">
+                                        <img src="{{$data.default_qrcode_logo}}" />
+                                    </div>
+                                {{else /}}
+                                    <div>未设置</div>
+                                {{/if}}
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>不符合分销条件描述</label>
+                                <div class="am-scrollable-vertical">
+                                    {{if !empty($data['non_conformity_desc'])}}
+                                        {{$data.non_conformity_desc}}
+                                    {{else /}}
+                                        未设置，默认[ 不展示 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>用户海报页面顶部描述</label>
+                                <div class="am-scrollable-vertical">
+                                    {{if !empty($data['user_poster_top_desc'])}}
+                                        {{$data.user_poster_top_desc}}
+                                    {{else /}}
+                                        未设置，默认[ 不展示 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>用户海报分享标题</label>
+                                <div>
+                                    {{if !empty($data['user_poster_share_title'])}}
+                                        {{$data.user_poster_share_title}}
+                                    {{else /}}
+                                        未设置，默认[ 浏览器标题 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>用户海报分享描述</label>
+                                <div class="am-scrollable-vertical">
+                                    {{if !empty($data['user_poster_share_desc'])}}
+                                        {{$data.user_poster_share_desc}}
+                                    {{else /}}
+                                        未设置，默认[ 站点页面描述 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>分销中心开启等级介绍</label>
+                                <div>
+                                    {{if isset($data['is_show_introduce']) and isset($distribution_is_enable_list[$data['is_show_introduce']])}}
+                                        {{$distribution_is_enable_list[$data['is_show_introduce']]['name']}}
+                                    {{else /}}
+                                        未设置，默认[ 开启 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="items am-padding-sm">
+                                <label>等级介绍顶部描述</label>
+                                <div class="am-scrollable-vertical">
+                                    {{if !empty($data['user_center_level_desc'])}}
+                                        {{$data.user_center_level_desc}}
+                                    {{else /}}
+                                        未设置，默认[ 不展示 ]
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 管理 -->
+            <div class="am-panel am-panel-secondary">
+                <div class="am-panel-hd">
+                    <span class="am-panel-title">管理</span>
+                </div>
+                <div class="am-panel-bd am-padding-sm">
+                    <ul class="am-avg-sm-1 am-avg-md-3 am-avg-lg-3 am-gallery-default">
+                        <li>
+                            <div class="nav-items am-text-center">
+                                <a href="{{:PluginsAdminUrl('distribution', 'level', 'index')}}" class="am-block am-text-sm am-padding-horizontal-sm am-padding-vertical">等级管理 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-items am-text-center">
+                                <a href="{{:PluginsAdminUrl('distribution', 'poster', 'index')}}" class="am-block am-text-sm am-padding-horizontal-sm am-padding-vertical">分享海报管理 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-items am-text-center">
+                                <a href="{{:PluginsAdminUrl('distribution', 'postergoods', 'index')}}" class="am-block am-text-sm am-padding-horizontal-sm am-padding-vertical">商品海报管理 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-items am-text-center">
+                                <a href="{{:PluginsAdminUrl('distribution', 'team', 'index')}}" class="am-block am-text-sm am-padding-horizontal-sm am-padding-vertical">分销商管理 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-items am-text-center">
+                                <a href="{{:PluginsAdminUrl('distribution', 'order', 'index')}}" class="am-block am-text-sm am-padding-horizontal-sm am-padding-vertical">分销订单 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-items am-text-center">
+                                <a href="{{:PluginsAdminUrl('distribution', 'profit', 'index')}}" class="am-block am-text-sm am-padding-horizontal-sm am-padding-vertical">收益明细 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 近15日收益走势 -->
+            <div class="am-panel am-panel-secondary">
+                <div class="am-panel-hd">
+                    <span class="am-panel-title">近15日收益走势</span>
+                </div>
+                <div class="am-panel-bd am-padding-sm">
+                    <div id="echarts-profit"></div>
+                </div>
+            </div> 
+
+            <!-- 近15日推广用户数 -->
+            <div class="am-panel am-panel-secondary">
+                <div class="am-panel-hd">
+                    <span class="am-panel-title">近15日推广用户数</span>
+                </div>
+                <div class="am-panel-bd am-padding-sm">
+                    <div id="echarts-user"></div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+<!-- right content end  -->
+        
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->
+
+<script type="text/javascript">
+$(function()
+{
+    // 近7日订单交易走势
+    var profit_chart = echarts.init(document.getElementById('echarts-profit'), 'macarons');
+    var option = {
+        tooltip : {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+        grid: {
+            top: '13%',
+            left: '3%',
+            right: '5%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: false},
+                saveAsImage : {name:'近15日收益走势', show: true}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap : false,
+            data: {{:json_encode($profit_chart.name_arr)}}
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: {{:json_encode($profit_chart.data)}},
+            type: 'line'
+        }]
+    };
+    profit_chart.setOption(option);
+
+    // 近15日推广用户数
+    var user_chart = echarts.init(document.getElementById('echarts-user'), 'macarons');
+    var option = {
+        tooltip : {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+        grid: {
+            top: '13%',
+            left: '3%',
+            right: '5%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: false},
+                saveAsImage : {name:'近15日推广用户数', show: true}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap : false,
+            data: {{:json_encode($user_chart.name_arr)}}
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: {{:json_encode($user_chart.data)}},
+            type: 'bar',
+            areaStyle: {}
+        }]
+    };
+    user_chart.setOption(option);
+
+    // 浏览器大小改变则实时更新图表大小
+    window.onresize = function ()
+    {
+        profit_chart.resize();
+        user_chart.resize();
+    };
+});
+</script>
