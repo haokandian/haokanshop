@@ -63,6 +63,84 @@ class UserStoreService
 
     }
 
+
+
+
+
+    static  function delContent($params=[]){
+        if(!empty($params['id']))  $data['id'] = $params['id'];
+        if(!empty($params['type']))   $data['type'] = $params['type'];
+        if(!empty($params['cname']))  $data['cname'] = $params['cname'];
+        if(!empty($params['goods_id']))   $data['goods_id'] = $params['goods_id'];
+        if(!empty($params['uid']))  $data['uid'] = $params['uid'];
+        $del =false;
+
+
+        $row =   Db::name('store')->where(['uid'=> $data['uid']])->find();
+
+
+        if( $params['type'] =="cname" ){
+
+            $good_array = json_decode($row["goods"],true);
+              foreach($good_array as $key => &$cate){
+                   if($cate['cname'] == $data['cname'] ){
+                       //var_dump($cate);
+                     unset($good_array[$key]);
+                     $del =true;
+                   }
+
+              }
+              $good_string = json_encode($good_array,320);
+              //var_dump($good_string);
+
+              if($del == false){
+                  return DataReturn('删除失败，系统可能无此分类');
+              }
+             //删除分类
+            $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update(['goods'=>$good_string]);
+           if($data){
+               return DataReturn('删除成功',0);
+           }
+
+        }
+
+        if( $params['type'] == "goods" ){
+            $del_good_array =   explode(",",$data['goods_id']);
+
+            $good_array = json_decode($row["goods"],true);
+            foreach($good_array as $g_k=> &$cate){
+                 foreach($del_good_array as  $j=>&$key){ //循环要删除的goods
+
+                    if( !empty($cate['goods_id'])  ){
+
+                        foreach($cate['goods_id']  as  $i=>&$item){
+                            if($item == $key){
+                               // var_dump($item);
+                                unset($del_good_array[$j]); //清除他们
+                                unset($good_array[$g_k]['goods_id'][$i] );
+                            }
+                        }
+                    }
+                }
+
+
+            }
+            $good_string = json_encode($good_array,320);
+
+            //删除分类
+            $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update(['goods'=>$good_string]);
+
+
+        }
+
+
+
+    }
+
+
+
+
+
     /*
      *
      *
