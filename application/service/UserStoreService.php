@@ -52,15 +52,42 @@ class UserStoreService
 
     }
 
+    /*
+     *
+     *
+     *
+     *
+     * {
+     *  [ cid: 大衣，
+     * "good_id":["6","6","5","11"]]
+     * ,
+     *   cid:"歹意"
+     *   "歹意":[],"短裤":["11"],"短裤二":["11"]}
+     *
+     *
+     *
+     * */
+
     static  function  addGoods($params=[]){
         if(!empty($params['cate_name']))  $data['cate_name'] = $params['cate_name'];
         if(!empty($params['goods_id']))  $data['goods_id'] = $params['goods_id'];
         if(!empty($params['uid']))  $data['uid'] = $params['uid'];
         $store_data = Db::name('store')->where([ 'uid'=>intval( $data['uid']) ])->find();
         $goods_array = json_decode($store_data['goods'],true);
-        $goods_array[  $data['cate_name']  ] [] =   $params['goods_id'];
-        $goods_string = json_encode($goods_array);
-        return   $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update( ['goods'=> $goods_string ]);
+        $find = false;
+        foreach($goods_array as &$item ){
+            if(!empty($item['cname']) && $item['cname'] == $data['cate_name'] ){
+                $find =true;
+                $item['goods_id'][] = $data['goods_id'] ;
+
+            }
+        }
+
+        if($find ==false) $goods_array[]=['cname'=>$data['cate_name'] ,'goods_id'=>[ $data['goods_id'] ] ];
+
+
+        $goods_string = json_encode($goods_array,320);
+        return  Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update( ['goods'=> $goods_string ]);
 
     }
 
@@ -69,12 +96,26 @@ class UserStoreService
         if(!empty($params['cate_name']))  $data['cate_name'] = $params['cate_name'];
         if(!empty($params['uid']))  $data['uid'] = $params['uid'];
         $store_data = Db::name('store')->where([ 'uid'=>intval( $data['uid']) ])->find();
+
         $goods_array = json_decode($store_data['goods'],true);
         if( array_key_exists($data['cate_name'] ,$goods_array ) ){
             return DataReturn('已经有此状态', -1);
         }
-        $goods_array[ $params['cate_name'] ] = [];
-        $update['goods'] =json_encode($goods_array);
+
+
+        foreach($goods_array as &$item ){
+            if(!empty($item['cname']) && $item['cname'] == $data['cate_name'] ){
+                $find =true;
+                //$item['goods_id'][] = $data['goods_id'] ;
+                return DataReturn('已经有此状态', -1);
+
+            }
+        }
+
+
+
+        $goods_array[]=['cname'=>$data['cate_name'] ,'goods_id'=>[] ];
+        $update['goods'] =json_encode($goods_array,320);
         return   $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update($update);
     }
 
