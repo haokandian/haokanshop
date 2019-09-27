@@ -1812,6 +1812,11 @@ class UserService
                 return $ret;
             }
 
+            //写入我的小店
+             UserStoreService::setContent(['uid'=>$user_id,'store_name'=>$data['username']+"的小店",'goods'=>json_encode([],320) ,'banner'=>json_encode([],320)]);
+
+
+
             // 登录返回
             $result = [
                 'body_html'     => is_array($body_html) ? implode(' ', $body_html) : $body_html,
