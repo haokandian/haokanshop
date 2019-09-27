@@ -111,5 +111,22 @@ class Store extends Common
 
     }
 
+
+
+    public  function  delContent()
+    {
+
+
+        $goods =  UserStoreService::delContent($this->data_request);
+
+        return DataReturn('success', 0, $goods);
+
+
+
+
+    }
+
+
+
 }
 ?>
