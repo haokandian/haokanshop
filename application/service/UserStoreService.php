@@ -30,11 +30,24 @@ class UserStoreService
            return   Db::name('store')->where($where)->find();
       }
 
-    static  function getContentByUid($uid){
-          $where =['uid'=> $uid];
-       $field ='s.id as sid , s.store_name ,  c.id as cid, c.cate_name ,g.id as sg_id ,g.gid ';
-       return    $data = Db::name('store')->alias('s')->rightJoin(['__STORE_CATE__'=>'c'], 'c.sid=s.id')->rightJoin(['__STORE_GOODS__'=>'g'],'c.id = g.scid') ->field($field)->where($where)->select();
-     //   return   Db::name('store')->where($where)->find();
+
+
+    static  function setContent($params=[]){
+        if(!empty($params['id']))  $data['id'] = $params['id'];
+        if(!empty($params['store_name']))  $data['store_name'] = $params['store_name'];
+        if(!empty($params['status']))   $data['status'] = $params['status'];
+        if(!empty($params['goods']))  $data['goods'] = $params['goods'];
+        if(!empty($params['banner']))   $data['banner'] = $params['banner'];
+        if(!empty($params['uid']))  $data['uid'] = $params['uid'];
+
+        if( empty($params['id'] ) ){ //添加操作
+           return   $data = Db::name('store')->insertGetId($data);
+
+        }else{ //有id 更新操作
+            return   $data = Db::name('store')->where([ 'id'=>intval($params['id']) ])->update($data);
+        }
+
     }
+
 }
 ?>

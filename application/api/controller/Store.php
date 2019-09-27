@@ -52,22 +52,7 @@ class Store extends Common
         $goods =  UserStoreService::getContent($this->data_post['user_id']);
 
         return $goods;
-       // SearchService::SearchAdd($this->data_post);
 
-        /*
-        // 获取数据
-        $ret = SearchService::GoodsList($this->data_post);
-
-        // 分类
-        if(!empty($this->data_post['category_id']))
-        {
-            $ret['data']['category'] = GoodsService::GoodsCategoryRow(['id'=>$this->data_post['category_id']]);
-        } else {
-            $ret['data']['category'] = [];
-        }
-
-        return $ret;
-        */
     }
 
 
@@ -83,11 +68,16 @@ class Store extends Common
     {
 
         // 搜索记录
-        $this->data_post['user_id'] = isset( $this->data_post['user_id']) ?  $this->data_post['user_id'] : 0;
+      //  $this->data_post['user_id'] = isset( $this->data_post['user_id']) ?  $this->data_post['user_id'] : 0;
 
-        $goods =  UserStoreService::getContent($this->data_post['user_id']);
+        $goods =  UserStoreService::setContent($this->data_request);
 
-        return $goods;
+        if($goods) {
+            return DataReturn('success', 0, $goods);
+        }else{
+            return DataReturn('操作失败，或，状态不变', -1);
+        }
+
 
     }
 }
