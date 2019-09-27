@@ -28,7 +28,18 @@ class UserStoreService
     static function getContent($uid){
           $where = ["uid"=>$uid ];
           $row =   Db::name('store')->where($where)->find();
-        //  if($row)
+
+
+          $goods_array =   json_decode($row['goods'],true);
+
+          foreach( $goods_array as &$good){
+              if(!empty($good['goods_id']))
+               $good['goods']  =  Db::name('goods')->field("id,title,images")->where(['id'=> $good['goods_id'] ])->select();
+
+
+          }
+
+        $row['goods'] = json_encode($goods_array,320);
 
         return  $row;
       }
