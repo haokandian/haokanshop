@@ -80,5 +80,36 @@ class Store extends Common
 
 
     }
+
+
+    public  function  addGoods()
+    {
+
+
+        $goods =  UserStoreService::addGoods($this->data_request);
+
+        if($goods) {
+            return DataReturn('success', 0, $goods);
+        }else{
+            return DataReturn('操作失败，或，状态不变', -1);
+        }
+
+
+    }
+
+
+    public  function  addCate()
+    {
+
+
+        $goods =  UserStoreService::addCate($this->data_request);
+
+        return DataReturn('success', 0, $goods);
+
+
+
+
+    }
+
 }
 ?>

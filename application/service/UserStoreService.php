@@ -27,7 +27,10 @@ class UserStoreService
 {
     static function getContent($uid){
           $where = ["uid"=>$uid ];
-           return   Db::name('store')->where($where)->find();
+          $row =   Db::name('store')->where($where)->find();
+        //  if($row)
+
+        return  $row;
       }
 
 
@@ -47,6 +50,32 @@ class UserStoreService
             return   $data = Db::name('store')->where([ 'id'=>intval($params['id']) ])->update($data);
         }
 
+    }
+
+    static  function  addGoods($params=[]){
+        if(!empty($params['cate_name']))  $data['cate_name'] = $params['cate_name'];
+        if(!empty($params['goods_id']))  $data['goods_id'] = $params['goods_id'];
+        if(!empty($params['uid']))  $data['uid'] = $params['uid'];
+        $store_data = Db::name('store')->where([ 'uid'=>intval( $data['uid']) ])->find();
+        $goods_array = json_decode($store_data['goods'],true);
+        $goods_array[  $data['cate_name']  ] [] =   $params['goods_id'];
+        $goods_string = json_encode($goods_array);
+        return   $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update( ['goods'=> $goods_string ]);
+
+    }
+
+
+    static  function  addCate($params=[]){
+        if(!empty($params['cate_name']))  $data['cate_name'] = $params['cate_name'];
+        if(!empty($params['uid']))  $data['uid'] = $params['uid'];
+        $store_data = Db::name('store')->where([ 'uid'=>intval( $data['uid']) ])->find();
+        $goods_array = json_decode($store_data['goods'],true);
+        if( array_key_exists($data['cate_name'] ,$goods_array ) ){
+            return DataReturn('已经有此状态', -1);
+        }
+        $goods_array[ $params['cate_name'] ] = [];
+        $update['goods'] =json_encode($goods_array);
+        return   $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update($update);
     }
 
 }
