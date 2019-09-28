@@ -94,7 +94,7 @@ class UserStoreService
               //var_dump($good_string);
 
               if($del == false){
-                  return DataReturn('删除失败，系统可能无此分类');
+                  return DataReturn('删除失败，系统可能无此分类',-1);
               }
              //删除分类
             $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update(['goods'=>$good_string]);
@@ -130,7 +130,7 @@ class UserStoreService
             //删除分类
             $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update(['goods'=>$good_string]);
 
-
+          return DataReturn('删除成功',0);
         }
 
 

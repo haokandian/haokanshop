@@ -88,6 +88,8 @@ class Store extends Common
 
         $goods =  UserStoreService::addGoods($this->data_request);
 
+
+
         if($goods) {
             return DataReturn('success', 0, $goods);
         }else{
@@ -104,7 +106,12 @@ class Store extends Common
 
         $goods =  UserStoreService::addCate($this->data_request);
 
-        return DataReturn('success', 0, $goods);
+        if(is_int($goods)){
+            return DataReturn('success', 0, $goods);
+        }else{
+            return $goods;
+        }
+
 
 
 
@@ -119,7 +126,13 @@ class Store extends Common
 
         $goods =  UserStoreService::delContent($this->data_request);
 
-        return DataReturn('success', 0, $goods);
+       if(is_int($goods)){
+           return DataReturn('success', 0, $goods);
+       }else{
+           return $goods;
+       }
+
+
 
 
 
