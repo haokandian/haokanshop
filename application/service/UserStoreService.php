@@ -108,8 +108,10 @@ class UserStoreService
 
         if( $params['type'] == "goods" ){
             $del_good_array =   explode(",",$data['goods_id']);
+            $store_row = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->find();
 
             $good_array = json_decode($row["goods"],true);
+            $del =false;
             foreach($good_array as $g_k=> &$cate){
                  foreach($del_good_array as  $j=>&$key){ //循环要删除的goods
 
@@ -120,6 +122,7 @@ class UserStoreService
                                // var_dump($item);
                                 unset($del_good_array[$j]); //清除他们
                                 unset($good_array[$g_k]['goods_id'][$i] );
+                              $del =   Db::name('store_goods')->where([ 'sid'=>intval($store_row['id']),'gid'=>intval($item) ])->delete();
                             }
                         }
                     }
@@ -133,8 +136,11 @@ class UserStoreService
 
             //删除分类
             $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update(['goods'=>$good_string]);
-
-          return DataReturn('删除成功',0);
+            if($del){
+              return DataReturn('删除成功',0);
+            }else{
+                return DataReturn('删除不成功',-1);
+            }
         }
 
 
@@ -166,6 +172,12 @@ class UserStoreService
         if(!empty($params['goods_id']))  $data['goods_id'] = $params['goods_id'];
         if(!empty($params['uid']))  $data['uid'] = $params['uid'];
         $store_data = Db::name('store')->where([ 'uid'=>intval( $data['uid']) ])->find();
+          //先查阅是否已经有此商品
+        $store_goods = Db::name('store_goods')->where([ 'sid'=>intval( $store_data['id'] ) ,'gid'=> intval( $data['goods_id'] )   ])->find();
+        if($store_goods){
+            return DataReturn('已有此商品，不许添加', -1);
+        }
+
         $goods_array = json_decode($store_data['goods'],true);
         $find = false;
         foreach($goods_array as &$item ){
@@ -177,6 +189,10 @@ class UserStoreService
         }
 
         if($find ==false) $goods_array[]=['cname'=>$data['cate_name'] ,'goods_id'=>[ $data['goods_id'] ] ];
+
+
+        //写入到store goods 表
+       Db::name('store_goods')->insert(['sid'=>$store_data['id'] ,'gid'=> intval( $data['goods_id'] )]);
 
 
         $goods_string = json_encode($goods_array,320);

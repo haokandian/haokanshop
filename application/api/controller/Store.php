@@ -88,13 +88,13 @@ class Store extends Common
 
         $goods =  UserStoreService::addGoods($this->data_request);
 
-
-
-        if($goods) {
+        if(is_int($goods)){
             return DataReturn('success', 0, $goods);
         }else{
-            return DataReturn('操作失败，或，状态不变', -1);
+            return $goods;
         }
+
+
 
 
     }
