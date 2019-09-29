@@ -90,8 +90,10 @@ class UserStoreService
                    }
 
               }
+             $good_array=    array_values($good_array);
+
               $good_string = json_encode($good_array,320);
-              //var_dump($good_string);
+
 
               if($del == false){
                   return DataReturn('删除失败，系统可能无此分类',-1);
@@ -125,6 +127,8 @@ class UserStoreService
 
 
             }
+            $good_array=    array_values($good_array);
+
             $good_string = json_encode($good_array,320);
 
             //删除分类
