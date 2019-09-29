@@ -12,7 +12,7 @@ namespace app\api\controller;
 
 use app\service\PaymentService;
 use app\service\OrderService;
-
+use app\plugins\distribution\service\BusinessService;
 /**
  * 我的订单
  * @author   Devil
@@ -54,36 +54,27 @@ class Team extends Common
 
         // 分页
         $number = 10;
-
+        $page = max(1, isset($this->data_post['page']) ? intval($this->data_post['page']) : 1);
         // 条件
         $where = BusinessService::UserTeamWhere($params);
 
         // 获取总数
         $total = BusinessService::UserTeamTotal($where);
 
+        $page_total = ceil($total/$number);
+        $start = intval(($page-1)*$number);
+
         // 分页
-        $page_params = array(
+      $page_params = array(
             'number'    =>  $number,
             'total'     =>  $total,
             'where'     =>  $params,
             'page'      =>  isset($params['page']) ? intval($params['page']) : 1,
-            'url'       =>  PluginsHomeUrl('distribution', 'team', 'index'),
+            //'url'       =>  PluginsHomeUrl('distribution', 'team', 'index'),
         );
 
-
-
-
-        // 分页
-        $number = 10;
-        $page = max(1, isset($this->data_post['page']) ? intval($this->data_post['page']) : 1);
-
-        // 条件
-        $where = OrderService::OrderListWhere($params);
-
-        // 获取总数
-        $total = OrderService::OrderTotal($where);
-        $page_total = ceil($total/$number);
-        $start = intval(($page-1)*$number);
+        //$page = new \base\Page($page_params);
+       // $this->assign('page_html', $page->GetPageHtml());
 
         // 获取列表
         $data_params = array(
@@ -91,116 +82,93 @@ class Team extends Common
             'n'         => $number,
             'where'     => $where,
         );
-        $data = OrderService::OrderList($data_params);
+        $data = BusinessService::UserTeamList($data_params);
+        //$this->assign('data_list', $data['data']);
 
-        // 支付方式
-        $payment_list = PaymentService::BuyPaymentList(['is_enable'=>1, 'is_open_user'=>1]);
+
+
+
+        // 参数
+        $this->assign('params', $params);
+
+
 
         // 返回数据
         $result = [
             'total'             =>  $total,
             'page_total'        =>  $page_total,
             'data'              =>  $data['data'],
-            'payment_list'      =>  $payment_list,
+            'start'   =>              $start
+          //  'payment_list'      =>  $payment_list,
         ];
         return DataReturn('success', 0, $result);
+
     }
 
     /**
-     * [Detail 获取详情]
+     * 首页
      * @author   Devil
      * @blog     http://gong.gg/
      * @version  1.0.0
-     * @datetime 2018-05-21T10:18:27+0800
+     * @datetime 2019-02-07T08:21:54+0800
+     * @param    [array]          $params [输入参数]
      */
-    public function Detail()
+    public function  profit($params = [])
     {
-        // 参数
-        $params = $this->data_post;
+        // 用户
         $params['user'] = $this->user;
+        $params['user_type'] = 'user';
+
+        // 分页
+        $number = 10;
+        $page = max(1, isset($this->data_post['page']) ? intval($this->data_post['page']) : 1);
 
         // 条件
-        $where = OrderService::OrderListWhere($params);
+        $where = BusinessService::UserProfitWhere($params);
+
+        // 获取总数
+        $total = BusinessService::UserProfitTotal($where);
+        $page_total = ceil($total/$number);
+        $start = intval(($page-1)*$number);
+
+        // 分页
+        $page_params = array(
+            'number'    =>  $number,
+            'total'     =>  $total,
+            'where'     =>  $params,
+            'page'      =>  isset($params['page']) ? intval($params['page']) : 1,
+            //'url'       =>  PluginsHomeUrl('distribution', 'profit', 'index'),
+        );
+       // $page = new \base\Page($page_params);
+      //  $this->assign('page_html', $page->GetPageHtml());
 
         // 获取列表
         $data_params = array(
-            'm'         => 0,
-            'n'         => 1,
+            'm'         =>$start,
+            'n'         => $number,
             'where'     => $where,
         );
-        $data = OrderService::OrderList($data_params);
-        if(!empty($data['data'][0]))
-        {
-            return DataReturn('success', 0, $data['data'][0]);
-        }
-        return DataReturn('数据不存在或已删除', -100);
-    }
-
-    /**
-     * 订单支付
-     * @author   Devil
-     * @blog    http://gong.gg/
-     * @version 1.0.0
-     * @date    2018-09-28
-     * @desc    description
-     */
-    public function Pay()
-    {
-        $params = $this->data_post;
-        $params['user'] = $this->user;
-        return OrderService::Pay($params);
-    }
+        $data = BusinessService::UserProfitList($data_params);
+       // $this->assign('data_list', $data['data']);
 
 
-    /**
-     * [Cancel 订单取消]
-     * @author   Devil
-     * @blog     http://gong.gg/
-     * @version  1.0.0
-     * @datetime 2018-05-21T10:48:48+0800
-     */
-    public function Cancel()
-    {
-        $params = $this->data_post;
-        $params['user_id'] = $this->user['id'];
-        $params['creator'] = $this->user['id'];
-        $params['creator_name'] = $this->user['user_name_view'];
-        return OrderService::OrderCancel($params);
+
+        // 返回数据
+        $result = [
+            'total'             =>  $total,
+            'page_total'        =>  $page_total,
+            'data'              =>  $data['data'],
+            'start'   =>              $start
+            //  'payment_list'      =>  $payment_list,
+        ];
+        return DataReturn('success', 0, $result);
+
+
+        // 参数
+    //    $this->assign('params', $params);
+      //  return $this->fetch('../../../plugins/view/distribution/index/profit/index');
     }
 
-    /**
-     * [Collect 订单收货]
-     * @author   Devil
-     * @blog     http://gong.gg/
-     * @version  1.0.0
-     * @datetime 2018-05-21T10:48:48+0800
-     */
-    public function Collect()
-    {
-        $params = $this->data_post;
-        $params['user_id'] = $this->user['id'];
-        $params['creator'] = $this->user['id'];
-        $params['creator_name'] = $this->user['user_name_view'];
-        return OrderService::OrderCollect($params);
-    }
-
-    /**
-     * 订单删除
-     * @author   Devil
-     * @blog    http://gong.gg/
-     * @version 1.0.0
-     * @date    2018-09-30
-     * @desc    description
-     */
-    public function Delete()
-    {
-        $params = $this->data_post;
-        $params['user_id'] = $this->user['id'];
-        $params['creator'] = $this->user['id'];
-        $params['creator_name'] = $this->user['user_name_view'];
-        $params['user_type'] = 'user';
-        return OrderService::OrderDelete($params);
-    }
 
 }
 ?>
