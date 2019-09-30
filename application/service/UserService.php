@@ -1813,7 +1813,7 @@ class UserService
             }
 
             //写入我的小店
-             UserStoreService::setContent(['uid'=>$user_id,'store_name'=>$data['username']+"的小店",'goods'=>json_encode([],320) ,'banner'=>json_encode([],320)]);
+             UserStoreService::setContent(['uid'=>$user_id,'store_name'=>$data['nickname']+"的小店",'goods'=>json_encode([],320) ,'banner'=>json_encode([],320)]);
 
 
 
