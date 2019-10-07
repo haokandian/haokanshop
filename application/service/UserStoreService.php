@@ -177,8 +177,16 @@ class UserStoreService
         if($store_goods){
             return DataReturn('已有此商品，不许添加', -1);
         }
-
         $goods_array = json_decode($store_data['goods'],true);
+
+
+        //如果没有分类名称取最后一个分类做为名称
+        if(empty($params['cate_name'])){
+            $length =  count($goods_array);
+            $data['cate_name'] = $params['cate_name'] = $goods_array[$length-1]['cname'];
+        }
+
+
         $find = false;
         foreach($goods_array as &$item ){
             if(!empty($item['cname']) && $item['cname'] == $data['cate_name'] ){
