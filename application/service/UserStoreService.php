@@ -84,7 +84,12 @@ class UserStoreService
             $good_array = json_decode($row["goods"],true);
               foreach($good_array as $key => &$cate){
                    if($cate['cname'] == $data['cname'] ){
-                       //var_dump($cate);
+
+                       if(count( $cate['goods_id'] )  > 0){
+                           return DataReturn('删除失败，请先删除分类下的商品',-1);
+                       }
+
+
                      unset($good_array[$key]);
                      $del =true;
                    }
