@@ -25,6 +25,10 @@ use app\service\ResourcesService;
  */
 class UserStoreService
 {
+
+    /*
+     *
+     * */
     static function getContent($uid){
           $where = ["uid"=>$uid ];
           $row =   Db::name('store')->where($where)->find();
@@ -54,11 +58,13 @@ class UserStoreService
         if(!empty($params['banner']))   $data['banner'] = $params['banner'];
         if(!empty($params['uid']))  $data['uid'] = $params['uid'];
 
-        if( empty($params['id'] ) ){ //添加操作
+         $row  = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->find();
+
+        if( empty($row) ){ //添加操作
            return   $data = Db::name('store')->insertGetId($data);
 
         }else{ //有id 更新操作
-            return   $data = Db::name('store')->where([ 'id'=>intval($params['id']) ])->update($data);
+            return   $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update($data);
         }
 
     }
