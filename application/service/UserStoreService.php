@@ -54,7 +54,7 @@ class UserStoreService
         if(!empty($params['id']))  $data['id'] = $params['id'];
         if(!empty($params['store_name']))  $data['store_name'] = $params['store_name'];
         if(!empty($params['status']))   $data['status'] = $params['status'];
-        if(!empty($params['goods']))  $data['goods'] = $params['goods'];
+        if(!empty($params['goods']))  $data['goods'] = urldecode($params['goods']) ;
         if(!empty($params['banner']))   $data['banner'] = $params['banner'];
         if(!empty($params['uid']))  $data['uid'] = $params['uid'];
 
@@ -64,7 +64,10 @@ class UserStoreService
            return   $data = Db::name('store')->insertGetId($data);
 
         }else{ //有id 更新操作
+
             return   $data = Db::name('store')->where([ 'uid'=>intval($params['uid']) ])->update($data);
+            /*}
+*/
         }
 
     }
