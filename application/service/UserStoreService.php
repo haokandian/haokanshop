@@ -37,9 +37,11 @@ class UserStoreService
           $goods_array =   json_decode($row['goods'],true);
 
           foreach( $goods_array as &$good){
-              if(!empty($good['goods_id']))
-               $good['goods']  =  Db::name('goods')->field("id,title,images")->where(['id'=> $good['goods_id'] ])->select();
-
+              if(!empty($good['goods_id'])){
+                   foreach($good['goods_id']  as  $id){
+                   $good['goods'][]  =  Db::name('goods')->field("id,title,images")->where(['id'=> $id ])->find();
+                   }
+              }
 
           }
 
